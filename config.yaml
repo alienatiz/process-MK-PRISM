@@ -1,0 +1,30 @@
+paths:
+  dataset_dir: "./dataset"
+  raw_tar_dir: "./dataset/raw_data"
+  processed_epsg4326_dir: "./processed_epsg4326"
+  processed_utm52n_30m_dir: "./processed_utm52n_30m"
+
+patterns:
+  tar_glob: "*.tar*"
+  nc_glob: "*.nc"
+  file_name_contains: "MKPRISM_MKPRISMv21_skorea_"
+
+crs:
+  epsg4326: "EPSG:4326"
+  epsg4326_code: "4326"
+  epsg4326_res_tag: "1e-2"
+  utm52n: "EPSG:32652"
+  utm52n_code: "32652"
+  utm52n_res_m: 30
+  utm52n_res_tag: "30m"
+  utm52n_resampling: "bilinear"
+  num_threads: 4
+
+dims:
+  x_candidates: ["lon", "longitude", "x"]
+  y_candidates: ["lat", "latitude", "y"]
+  time_dim: "time"
+
+export:
+  nodata: -99
+  dtype: "float32"
