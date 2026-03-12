@@ -36,6 +36,10 @@ The bundled MK-PRISM archives cover four variables:
 - `TAMAX`: maximum temperature
 - `RN`: precipitation
 
+MK-PRISM data download:
+
+- <https://climate.go.kr/atlas/ana/cdd>
+
 ## Environment
 
 For public use, prefer the portable environment file:
