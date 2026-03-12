@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local environments
+.venv/
+venv/
+.env
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Generated data
+processed_epsg4326/
+processed_utm52n_30m/
+dataset/raw_data/
+dataset/__tmp_extract__/
+
+# Optional: ignore extracted NetCDF if you don't want to commit them
+dataset/*.nc
