@@ -3,23 +3,30 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
 
 # Local environments
 .venv/
 venv/
 .env
+.env.*
 
 # OS/editor files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+*.log
 
 # Generated data
 processed_epsg4326/
 processed_utm52n_30m/
 dataset/raw_data/
 dataset/__tmp_extract__/
+*.aux.xml
 
-# Optional: ignore extracted NetCDF if you don't want to commit them
+# Extracted NetCDF generated from the committed archive inputs
 dataset/*.nc
