@@ -1,0 +1,12 @@
+name: mk-prism
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pyyaml
+  - xarray
+  - netcdf4
+  - cftime
+  - rasterio
+  - rioxarray

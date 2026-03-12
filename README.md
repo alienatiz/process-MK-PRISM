@@ -38,14 +38,23 @@ The bundled MK-PRISM archives cover four variables:
 
 ## Environment
 
-Create the Conda environment from the repository root:
+For public use, prefer the portable environment file:
+
+```bash
+conda env create -f environment-public.yml
+conda activate mk-prism
+```
+
+The existing [environment.yml](environment.yml) is better treated as a fuller local export. It can still be useful for reproducing the original setup, but it is more platform-specific than most public users need.
+
+If you want to use the exported environment instead, run:
 
 ```bash
 conda env create -f environment.yml
 conda activate aibio_310
 ```
 
-Before sharing or recreating the environment on another machine, remove the final `prefix:` line from [environment.yml](environment.yml). It points to a machine-specific Windows path.
+If you keep [environment.yml](environment.yml) in the public repo, avoid reintroducing a machine-specific `prefix:` line.
 
 ## Usage
 
@@ -100,3 +109,12 @@ processed_utm52n_30m/MKPRISM_MKPRISMv21_skorea_TA_yearly_2010_2015/MKPRISMv21_sk
 Code and documentation in this repository are licensed under the MIT License. See [LICENSE](LICENSE).
 
 The contents of `dataset/` are not automatically covered by the MIT License unless you explicitly have the right to release those files under MIT. If you plan to publish this repository, confirm the redistribution terms for the dataset archives or document a separate data license.
+
+## Public Release Checklist
+
+Before pushing this repository publicly, verify the following:
+
+- confirm that you have the right to redistribute the files in `dataset/`
+- if the dataset archives are public, check their internal metadata for usernames, internal paths, or processing history you do not want to expose
+- prefer [environment-public.yml](environment-public.yml) for public setup instructions
+- keep generated outputs out of version control via [.gitignore](.gitignore)
